@@ -1,0 +1,25 @@
+.form-row{
+	width:60%;
+	margin: 0 auto;
+}
+.form-row div{
+	padding-top:20px;
+	text-align:left;
+	font-family:Spring;
+}
+@font-face {
+  font-family: "Spring";
+  src: url("../fonts/Muli-ExtraLight.ttf");
+  }
+  @font-face {
+  font-family: "Spring-bold";
+  src: url("../fonts/MeriendaOne-Regular.ttf");
+  }
+  @font-face {
+  font-family: "Spring-semibold";
+  src: url("../fonts/Muli-SemiBold.ttf");
+  }
+  @font-face {
+  font-family: "Spring-regular";
+  src: url("../fonts/Muli-Regular.ttf");
+  }

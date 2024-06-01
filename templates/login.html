@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../static/images/student.png" />
+
+    <title>Signin Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet" />
+    <link
+      href="../static/css/font.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <!-- Custom styles for this template -->
+    <link href="../static/css/signin.css" rel="stylesheet" />
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin" method="post" action="/check_login">
+      <img
+        class="mb-4"
+        src="../static/images/student.png"
+        alt=""
+        width="150"
+        height="150"
+      />
+      <h1 class="h3 mb-3 font-weight-normal">LOGIN</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input
+        type="text"
+        name="uname"
+        class="form-control"
+        placeholder="Username"
+        required
+        autofocus
+      />
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input
+        type="password"
+        name="pword"
+        class="form-control"
+        placeholder="Password"
+        required
+      />
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me" />
+          Remember me
+        </label>
+      </div>
+      <input
+        class="btn btn-lg btn-primary btn-block"
+        type="submit"
+        name="logbt"
+        value="Login in"
+      />
+    </form>
+  </body>
+</html>

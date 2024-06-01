@@ -1,0 +1,39 @@
+<html>
+<body>
+<form method="post" action="/stud_instr">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container be-detail-container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <br>
+            <center><img src="https://cdn2.iconfinder.com/data/icons/luchesa-part-3/128/SMS-512.png" class="img-responsive" style="width:200px; height:200px;margin:0 auto;"></center><br>
+            
+            <center><h1 class="text-center">Verify your Question Paper Code</center></h1><br>
+            <p class="lead" style="align:center"></p><p> <center>Thanks for giving your details.Please enter the 4 digit Question paper code below for Successful Registration</center></p>  <p></p>
+        <br>
+       
+            <form method="post" id="veryfyotp" action="">
+                <div class="row">                    
+                <div class="form-group col-sm-8">
+                	 <span style="color:red;"></span><center>                  <input type="text" class="form-control" name="otp" placeholder="Enter your OTP number" required=""></center>  
+                </div>
+               <center> <button type="submit" class="btn btn-primary  pull-right col-sm-3">Verify</button></center>
+                </div>
+            </form>
+        <br><br>
+        </div>
+    </div>        
+</div>
+<script>
+        $(function() {
+        $(this).bind("contextmenu", function(e) {
+            e.preventDefault();
+        });
+    }); 
+    </script>
+</body>
+</html>

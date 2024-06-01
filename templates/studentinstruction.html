@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+      window.history.forward()
+      function noBack() {
+        window.history.forward()
+      }
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Set height of body and the document to 100% */
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial;
+      }
+
+      /* Style tab links */
+      .tablink {
+        background-color: #555;
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 25%;
+      }
+
+      .tablink:hover {
+        background-color: #777;
+      }
+
+      /* Style the tab content (and add height:100% for full page content) */
+      .tabcontent {
+        color: white;
+        display: none;
+        padding: 100px 20px;
+      }
+
+      #Home {
+        background-color: blue;
+      }
+
+      body {
+        /* Set "my-sec-counter" to 0 */
+        counter-reset: my-sec-counter;
+      }
+
+      h5::before {
+        /* Increment "my-sec-counter" by 1 */
+        counter-increment: my-sec-counter;
+        content: counter(my-sec-counter) '. ';
+      }
+      .button {
+        background-color: #4caf50; /* Green */
+        border: none;
+        color: white;
+        width: 100%;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+
+      .button2 {
+        background-color: white;
+        color: black;
+        border: 2px solid #008cba;
+      }
+
+      .button2:hover {
+        background-color: #008cba;
+        color: white;
+      }
+    </style>
+  </head>
+  <body onload="onBack();">
+    <button class="tablink" onclick="openPage('Home', this, 'red')">
+      Click to view instruction
+    </button>
+    <form method="post" action="/stud_home/{{e}}">
+      <div id="Home" class="tabcontent" class="header">
+        <h3><center>INSTRUCTIONS TO EXAMINATION CANDIDATES</center></h3>
+        <hr />
+        <h1><center>General Instructions</center></h1>
+        {{a1}}
+        <hr align="center" width="50%" />
+        <table>
+          <tr>
+            <h5>
+              You should arrive in good time to your specified examination room,
+              and are permitted to enter the room 10-15 minutes before the
+              scheduled start of the examination. For large examinations this
+              may be extended to 30 minutes.
+            </h5>
+          </tr>
+          <tr>
+            <h5>
+              You will not be permitted to enter the exam if you arrive more
+              than 30 minutes after the scheduled start time. If you arrive
+              within the first 30 minutes, you will be admitted, but you will
+              not be given any extra time to complete the examination.
+            </h5>
+          </tr>
+          <tr>
+            <h5>
+              You MUST sign the attendance register, if your details do not
+              appear on the register you should seek guidance from the
+              Invigilator.
+            </h5>
+          </tr>
+          <tr>
+            <h5>
+              Valuables should not be brought into the examination room. If you
+              choose to do so, it will be at your own risk.
+            </h5>
+          </tr>
+          <tr>
+            <h5>
+              You MUST bring your student ID card to all your examinations, it
+              should be visible and placed, photograph up on your desk
+            </h5>
+          </tr>
+          <tr>
+            <h5>
+              Only write your student number, not your name, on each answer
+              book.
+            </h5>
+          </tr>
+          <tr>
+            <h5>
+              A bottle of water and small items of confectionary are allowed in
+              the examination room. Sandwiches, crisps, fizzy and canned drinks
+              are not permitted and will be confiscated.
+            </h5>
+          </tr>
+          <tr>
+            <h5>
+              Remain seated and raise your hand if you wish to attract the
+              attention of the Invigilator during the examination.
+            </h5>
+          </tr>
+          <tr>
+            <h5>
+              During the first 45 minutes from the start of the examination or
+              during the last 30 minutes you will not be permitted to leave the
+              examination room permanently for reasons other than illness
+            </h5>
+          </tr>
+          <tr>
+            <h5>
+              If you wish to leave the examination room for any reason,
+              including having completed the examination, you may only do so
+              with the permission of the Invigilator. If you intend to return to
+              the examination, you must be accompanied by an Invigilator.
+            </h5>
+          </tr>
+          <tr>
+            <h5>
+              During and at the end of the examination students must remain
+              seated until the Invigilator has given you permission to leave and
+              collected all exam scripts.
+            </h5>
+          </tr>
+          <tr>
+            <center>
+              <button type="submit" class="button button2" width="50%">
+                Click to start the Examination
+              </button>
+            </center>
+          </tr>
+        </table>
+      </div>
+
+      <script>
+        function openPage(pageName, elmnt, color) {
+          var i, tabcontent, tablinks
+          tabcontent = document.getElementsByClassName('tabcontent')
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = 'none'
+          }
+          tablinks = document.getElementsByClassName('tablink')
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = ''
+          }
+          document.getElementById(pageName).style.display = 'block'
+          elmnt.style.backgroundColor = color
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById('defaultOpen').click()
+      </script>
+    </form>
+  </body>
+</html>
